@@ -1,0 +1,6 @@
+sameTree Description
+两棵树是否相等判断依据：
+假设两棵树分别是root1和root2，则他们相同的前提是root1和root2的值相同，并且root1和root2的左右子树分别相等，
+那么才可以说这两棵树root1，root2相等
+算法实现方法：
+最直接的方法是用递归。
