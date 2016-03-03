@@ -1,0 +1,23 @@
+利用交换的思想：比如数组中交换两个值a[i],a[i+1];
+那么
+T tmp;
+tmp = a[i];
+a[i] = a[i+1];
+a[i+1] =tmp;
+
+或者利用二叉树后序遍历的思想
+class Solution {
+public:
+    TreeNode* invertTree(TreeNode* root) {
+        if(!root)
+            return NULL;
+        if(!root->left && !root->right)
+            return root;
+        TreeNode *pl, *pr;
+        pl = invertTree(root->left);
+        pr = invertTree(root->right);
+        root->left = pr;
+        root->right = pl;
+        return root;
+    }
+};
